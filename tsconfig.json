@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "allowJs": true,
+      "jsx": "react-jsx",
+      "baseUrl": ".",
+      "paths": {
+        "@src/*": ["src/*"],
+        "@/*": ["*"]
+      },
+      "module": "esnext",
+      "target": "esnext",
+      "moduleResolution": "node",
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "isolatedModules": true,
+      "noImplicitAny": false,
+      "resolveJsonModule": true 
+    },
+    "include": ["src"]
+  }
+  

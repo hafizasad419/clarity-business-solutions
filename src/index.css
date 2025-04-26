@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+
+
+@theme {
+  --color-c-zinc: #04ADC0;
+}
+
+
+@layer base {
+  html {
+    font-family: 'Satoshi-Variable', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #f5f5f5;
+
+  }
+}
+
+.btn-primary {
+  @apply shadow-xl px-6 py-3 text-white bg-c-zinc font-bold rounded-full transition duration-300 ease-in-out select-none focus:outline-none disabled:bg-c-zinc/50 disabled:text-white disabled:cursor-not-allowed capitalize active:scale-90 flex items-center gap-4 cursor-pointer;
+}
+
+.btn-outline {
+  @apply shadow-xl px-6 py-3 text-c-zinc bg-transparent border-2 border-c-zinc font-bold rounded-full transition duration-300 ease-in-out select-none focus:outline-none disabled:border-c-zinc/50 disabled:text-c-zinc/50 disabled:cursor-not-allowed capitalize active:scale-90 flex items-center gap-4 cursor-pointer;
+
+}
+
+
+
+/* Error and Success Messages */
+.error-message {
+  @apply bg-red-100 text-red-500 p-4 rounded-xl my-4
+}
+
+.success-message {
+  @apply bg-green-100 text-green-600 p-4 rounded-xl my-4
+}
+
+
+/* Scrollbar */
+
+body {
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #04ADC0;
+  --sb-size: 8px;
+  /* Scrollbar width */
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  /* Track color (Gray-300) */
+  border-radius: 10px;
+  /* Rounded corners */
+  padding: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  /* Thumb color (Slate-700) */
+  border-radius: 10px;
+  /* Rounded corners */
+  border: 2px solid transparent;
+  /* Padding for thumb visibility */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #078997;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    scrollbar-width: thin;
+  }
+}
+
+
