@@ -13,19 +13,36 @@
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    background-color: #f5f5f5;
+    /* background-color: #000000; */
+    
 
   }
 }
 
+.bg-hero-gradient {
+  background-image: linear-gradient(to right, #000 0%, #000 50%, #2b9facad 100%);
+}
+
+
 .btn-primary {
-  @apply shadow-xl px-6 py-3 text-white bg-c-zinc font-bold rounded-full transition duration-300 ease-in-out select-none focus:outline-none disabled:bg-c-zinc/50 disabled:text-white disabled:cursor-not-allowed capitalize active:scale-90 flex items-center gap-4 cursor-pointer;
+  @apply shadow-xl text-sm px-4 py-2 text-white bg-c-zinc font-bold rounded-full transition duration-300 ease-in-out select-none focus:outline-none disabled:bg-c-zinc/50 disabled:text-white disabled:cursor-not-allowed capitalize active:scale-90 flex items-center gap-4 cursor-pointer;
 }
 
 .btn-outline {
-  @apply shadow-xl px-6 py-3 text-c-zinc bg-transparent border-2 border-c-zinc font-bold rounded-full transition duration-300 ease-in-out select-none focus:outline-none disabled:border-c-zinc/50 disabled:text-c-zinc/50 disabled:cursor-not-allowed capitalize active:scale-90 flex items-center gap-4 cursor-pointer;
+  @apply shadow-xl px-4 py-2 text-sm text-c-zinc bg-transparent border-2 border-c-zinc font-bold rounded-full transition duration-300 ease-in-out select-none focus:outline-none disabled:border-c-zinc/50 disabled:text-c-zinc/50 disabled:cursor-not-allowed capitalize active:scale-90 flex items-center gap-4 cursor-pointer;
 
 }
+
+.smooth-hover-underline {
+  @apply relative text-white tracking-wide after:content-[''] after:absolute after:left-1/2 after:top-[calc(100%+8px)] after:w-0 after:h-[2px] after:bg-c-zinc after:transition-all after:duration-500 after:transform after:-translate-x-1/2 hover:after:w-full
+}
+
+
+.nav-underline {
+  @apply relative text-white tracking-wide after:content-[''] after:absolute after:left-1/2 after:top-[calc(100%+8px)] after:h-[2px] after:bg-c-zinc after:transition-all after:duration-500 after:transform after:-translate-x-1/2 after:w-full
+}
+
+
 
 
 
