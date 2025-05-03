@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <main className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="bg-hero-gradient text-white">
+      <section className="bg-hero-gradient text-white relative">
         <div className="container mx-auto px-4 py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -28,23 +28,31 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="relative">
 
-              {/* <img
+
+
+            <div className="">
+
+              <img
                 src={charlieCopy}
                 alt="Charlie"
-                /> */}
-              <div className="bg-white p-6 rounded-xl shadow-xl max-w-md mx-auto">
+                className="absolute top-8 w-72 right-32 z-[1]"
+              />
+
+              {/* Review Card */}
+
+              <div className="bg-white px-2 py-2 rounded-xl shadow-xl max-w-64 mx-auto relative z-[100]">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+                  <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
                     <img
-                      src="/placeholder.svg?height=48&width=48"
+                      src="https://avatar.iran.liara.run/public/49"
                       alt="Jane Cooper"
                       className="w-full h-full object-cover"
                     />
+                    
                   </div>
                   <div>
-                    <h3 className="font-semibold">Jane Cooper</h3>
+                    <h3 className="font-semibold text-gray-700 text-sm">John Doe</h3>
                     <div className="flex text-yellow-400">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} size={16} fill="currentColor" />
@@ -52,8 +60,12 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-700 italic">"Clarity simplified our processes and delivered great results!"</p>
+                <p className="text-gray-700 italic text-xs">"Clarity simplified our processes and delivered great results!"</p>
               </div>
+
+
+
+
               <div className="absolute -bottom-10 -right-10 bg-white p-4 rounded-xl shadow-lg">
                 <div className="flex items-center gap-4">
                   <div className="text-c-zinc">
@@ -64,6 +76,10 @@ const Home = () => {
                 </div>
               </div>
             </div>
+
+
+
+
           </div>
         </div>
       </section>
