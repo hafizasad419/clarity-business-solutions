@@ -24,10 +24,56 @@
 }
 
 
-.btn-primary {
+
+
+/* .btn-primary {
   @apply shadow-xl text-sm px-4 py-2 text-white bg-c-zinc font-bold rounded-full transition duration-300 ease-in-out select-none focus:outline-none disabled:bg-c-zinc/50 disabled:text-white disabled:cursor-not-allowed capitalize active:scale-90 flex items-center gap-4 cursor-pointer;
+} */
+
+.btn-primary {
+  @apply inline-flex items-center justify-between
+        rounded-full overflow-hidden
+        shadow-xl select-none transition
+        duration-300 ease-in-out
+        cursor-pointer;
+
+
+  @apply h-12 pr-2 pl-6;      
+
+  /* gradient */
+  background: linear-gradient(
+    90deg,
+    rgb(4,173,192) 10%,
+    rgb(12,222,220) 100%
+  );
 }
 
+/* Label text */
+.btn-primary__label {
+  @apply flex-1 text-white font-semibold text-base
+        pl-6;
+}
+
+/* Circular icon container */
+.btn-primary__icon {
+  @apply flex items-center justify-center
+        bg-white rounded-full
+         w-12 h-12;  /* match the capsule height */
+  @apply text-c-zinc; /* arrow color */
+}
+
+/* Hover / active states */
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+.btn-primary:active {
+  @apply scale-95;
+}
+.btn-primary:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* ---------------------- */
 .btn-outline {
   @apply shadow-xl px-4 py-2 text-sm text-c-zinc bg-transparent border-2 border-c-zinc font-bold rounded-full transition duration-300 ease-in-out select-none focus:outline-none disabled:border-c-zinc/50 disabled:text-c-zinc/50 disabled:cursor-not-allowed capitalize active:scale-90 flex items-center gap-4 cursor-pointer;
 
