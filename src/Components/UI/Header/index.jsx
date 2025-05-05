@@ -1,19 +1,18 @@
-import { useState, useEffect } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { Menu, X } from "lucide-react"
-import { navLinks } from "./navLinks"
-import { clarityLogo } from "@src/assets/images"
-import PrimaryButton from "../PrimaryButton"
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { navLinks } from "./navLinks";
+import { clarityLogo } from "@src/assets/images";
+import SolidButton from "../PrimaryButton";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const location = useLocation()
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     // Close mobile menu when route changes
-    setIsMenuOpen(false)
-  }, [location])
+    setIsMenuOpen(false);
+  }, [location]);
 
   return (
     <header
@@ -36,8 +35,11 @@ const Header = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`smooth-hover-underline text-sm font-medium transition-colors hover:text-c-zinc ${location.pathname === link.path ? "text-c-zinc nav-underline" : "text-gray-700"
-                  }`}
+                className={`smooth-hover-underline text-sm font-medium transition-colors hover:text-c-zinc ${
+                  location.pathname === link.path
+                    ? "text-c-zinc nav-underline"
+                    : "text-gray-700"
+                }`}
               >
                 {link.name}
               </Link>
@@ -46,12 +48,12 @@ const Header = () => {
 
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/contact">
+            <SolidButton text="Get In Touch" to={"/contact"} />
+            {/* <Link to="/contact">
             <PrimaryButton>
               Get In Touch
             </PrimaryButton>
-            </Link>
-           
+            </Link> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,17 +76,26 @@ const Header = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`text-sm font-medium transition-colors hover:text-c-zinc ${location.pathname === link.path ? "text-c-zinc" : "text-gray-700"
-                    }`}
+                  className={`text-sm font-medium transition-colors hover:text-c-zinc ${
+                    location.pathname === link.path
+                      ? "text-c-zinc"
+                      : "text-gray-700"
+                  }`}
                 >
                   {link.name}
                 </Link>
               ))}
               <div className="pt-4 border-t border-gray-200 flex flex-col space-y-4">
-                <Link to="/signin" className="text-sm font-medium text-gray-700 hover:text-c-zinc">
+                <Link
+                  to="/signin"
+                  className="text-sm font-medium text-gray-700 hover:text-c-zinc"
+                >
                   Sign In
                 </Link>
-                <Link to="/signup" className="btn-primary py-2 px-4 inline-block text-center">
+                <Link
+                  to="/signup"
+                  className="btn-primary py-2 px-4 inline-block text-center"
+                >
                   Sign up Free
                 </Link>
               </div>
@@ -93,7 +104,7 @@ const Header = () => {
         </div>
       )}
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
