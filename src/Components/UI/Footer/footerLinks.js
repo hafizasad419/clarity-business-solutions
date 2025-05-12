@@ -1,12 +1,12 @@
 export  const footerLinks = {
-    resources: [
+    quickLinks: [
       { name: "Home", path: "/" },
-      { name: "FileMaker Development", path: "/filemaker-development" },
+      { name: "Services", path: "/services" },
       { name: "Project", path: "/project" },
       { name: "Blogs", path: "/blogs" },
       { name: "Contact Us", path: "/contact" },
     ],
-    company: [
+    services: [
       { name: "About us", path: "/about" },
       { name: "Careers", path: "/careers" },
       { name: "News", path: "/news" },

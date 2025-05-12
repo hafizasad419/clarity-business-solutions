@@ -4,7 +4,7 @@ import Fallback from "@src/Components/Fallback"
 
 const Home = lazy(() => import("@src/Pages/Home"))
 const About = lazy(() => import("@src/Pages/About"))
-const FilemakerDevelopment = lazy(() => import("@src/Pages/FilemakerDevelopment"))
+const Services = lazy(() => import("@src/Pages/Services"))
 const Projects = lazy(() => import("@src/Pages/Projects"))
 const Blog = lazy(() => import("@src/Pages/Blog"))
 const BlogPost = lazy(() => import("@src/Pages/Blog/BlogPost"))
@@ -16,8 +16,8 @@ function AuthRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/filemaker-development" element={<FilemakerDevelopment />} />
-        <Route path="/project" element={<Projects />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/blogs" element={<Blog />} />
         <Route path="/blogs/:slug" element={<BlogPost />} />
         <Route path="/contact" element={<Contact />} />

@@ -1,7 +1,4 @@
-import React from "react";
-
-
-const InfoSection = ({
+const List = ({
   heading,
   items = [],
 }) => {
@@ -9,9 +6,8 @@ const InfoSection = ({
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         
-        {/* Dynamic stuff */}
           <div className="space-y-8">
-              <h3 className="text-2xl font-semibold text-gray-800">{heading}</h3>
+              <h2 className="h2 text-gray-800">{heading}</h2>
             {items.map((item, index) => (
               <div key={index} className="flex gap-4">
                 <div className="text-c-zinc font-bold text-xl">{item.number}</div>
@@ -27,4 +23,4 @@ const InfoSection = ({
   );
 };
 
-export default InfoSection;
+export default List;

@@ -1,6 +1,4 @@
-import React from "react";
-import ButtonBgT from "../UI/OutlinedButton";
-import * as Icons from "lucide-react";
+import OutlinedButton from "../OutlinedButton";
 
 /**
  * Reusable PromoSection Component with stain background
@@ -8,14 +6,12 @@ import * as Icons from "lucide-react";
  * @param {string} subtitle - Subheading or description
  * @param {string} buttonText - CTA button text
  * @param {Array} features - List of feature objects with title and description
- * @param {Function} onClick - Optional click handler for CTA
  */
 const PromoSection = ({
   title,
   subtitle,
   buttonText,
   features = [],
-  onClick,
 }) => {
   return (
     <section className="relative overflow-hidden min-h-screen bg-black text-white p-8 flex flex-col md:flex-row items-center justify-center">
@@ -40,23 +36,27 @@ const PromoSection = ({
         <p className="text-lg mb-6">{subtitle}</p>
 
         <div className="flex justify-start text-black">
-          <ButtonBgT text={buttonText} onClick={onClick} to={"/"} />
+          <OutlinedButton
+            type="link"
+            to={"/services"}
+            text={buttonText}
+          />
         </div>
       </div>
 
       {/* Right Section */}
       <div className="relative z-10 md:w-1/2 p-6 space-y-6">
         {features.map((feature, idx) => {
-          const LucideIcon = Icons[feature.icon] || Icons.Check;
+          const LucideIcon = feature.icon
           return (
             <div key={idx} className="flex items-start space-x-4">
               <div className="bg-none border-2 border-white text-white rounded-full p-3">
                 <LucideIcon className="w-6 h-6" />
               </div>
               <div>
-              <h3 className="text-xl font-semibold text-white bg-gradient-to-r from-teal-300 to-cyan-400 bg-clip-text transition-all duration-200 ease-in-out hover:text-transparent">
-  {feature.title}
-</h3>
+                <h3 className="text-xl font-semibold text-white">
+                  {feature.title}
+                </h3>
 
 
 

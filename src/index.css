@@ -7,6 +7,8 @@
 }
 
 
+
+
 @layer base {
   html {
     font-family: 'Satoshi-Variable', sans-serif;
@@ -14,68 +16,27 @@
     font-weight: 500;
     font-style: normal;
     /* background-color: #000000; */
-    
+
 
   }
 }
 
 .bg-hero-gradient {
-  background-image: linear-gradient(to right, #000 0%, #000 50%, #2b9facad 100%);
+  background-image: linear-gradient(to right, #000 0%, #000 50%, #2b9fac 100%);
 }
 
-
-
-
-/* .btn-primary {
-  @apply shadow-xl text-sm px-4 py-2 text-white bg-c-zinc font-bold rounded-full transition duration-300 ease-in-out select-none focus:outline-none disabled:bg-c-zinc/50 disabled:text-white disabled:cursor-not-allowed capitalize active:scale-90 flex items-center gap-4 cursor-pointer;
-} */
 
 .btn-primary {
-  @apply inline-flex items-center justify-between
-        rounded-full overflow-hidden
-        shadow-xl select-none transition
-        duration-300 ease-in-out
-        cursor-pointer;
-
-
-  @apply h-12 pr-2 pl-6;      
+  @apply inline-flex items-center justify-between rounded-full text-white font-bold overflow-hidden shadow-xl select-none transition duration-150 ease-in-out cursor-pointer h-12 pr-2 pl-6 active:scale-90;
 
   /* gradient */
-  background: linear-gradient(
-    90deg,
-    rgb(4,173,192) 10%,
-    rgb(12,222,220) 100%
-  );
+  background: linear-gradient(90deg,
+      #06a5b7 10%,
+      #07d4d1 100%);
 }
 
-/* Label text */
-.btn-primary__label {
-  @apply flex-1 text-white font-semibold text-base
-        pl-6;
-}
-
-/* Circular icon container */
-.btn-primary__icon {
-  @apply flex items-center justify-center
-        bg-white rounded-full
-         w-12 h-12;  /* match the capsule height */
-  @apply text-c-zinc; /* arrow color */
-}
-
-/* Hover / active states */
-.btn-primary:hover {
-  filter: brightness(1.1);
-}
-.btn-primary:active {
-  @apply scale-95;
-}
-.btn-primary:disabled {
-  @apply opacity-50 cursor-not-allowed;
-}
-
-/* ---------------------- */
 .btn-outline {
-  @apply shadow-xl px-4 py-2 text-sm text-c-zinc bg-transparent border-2 border-c-zinc font-bold rounded-full transition duration-300 ease-in-out select-none focus:outline-none disabled:border-c-zinc/50 disabled:text-c-zinc/50 disabled:cursor-not-allowed capitalize active:scale-90 flex items-center gap-4 cursor-pointer;
+  @apply flex items-center justify-between h-14 border-1 border-c-zinc text-base bg-white active:brightness-98 transition-all ease-in-out shadow-xl pl-4 pr-2 text-gray-700 font-bold rounded-full duration-150 select-none focus:outline-none disabled:border-c-zinc/50 disabled:text-c-zinc/50 disabled:cursor-not-allowed capitalize active:scale-90 cursor-pointer;
 
 }
 
@@ -99,6 +60,21 @@
 
 .success-message {
   @apply bg-green-100 text-green-600 p-4 rounded-xl my-4
+}
+
+
+
+.h1 {
+  @apply text-5xl lg:text-6xl text-white font-extrabold
+}
+
+.h2 {
+  @apply text-4xl lg:text-5xl font-extrabold
+}
+
+
+.blurb-shadow {
+  @apply shadow-lg shadow-c-zinc
 }
 
 
@@ -143,4 +119,11 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,12 +1,9 @@
-import React from "react";
-import ButtonBgT from "../UI/OutlinedButton";
+import OutlinedButton from "../OutlinedButton";
 
 const ServicesSection = ({ services }) => {
   return (
     <div className="max-w-6xl mx-auto p-6">
       {services.map((service, index) => {
-        const [para1, para2] = service.description.split("\n\n");
-
         return (
           <div
             key={index}
@@ -18,15 +15,22 @@ const ServicesSection = ({ services }) => {
                 {service.title}
               </h2>
               <div className="mt-10 flex justify-start">
-                <ButtonBgT text={"Learn More"} to={"/blogs"} />
+                <OutlinedButton
+                  type="link"
+                  to="/blogs"
+                  text="Get Started"
+                />
               </div>
             </div>
 
             {/* Right: Paragraphs */}
             <div className="md:w-1/2 text-left text-gray-700 text-base leading-relaxed">
-              <p className="mb-4 font-bold">{para1}</p>
-              <p className="font-normal">{para2}</p>
-            <hr className="border-t border-gray-300 my-4" />
+              {service.description?.map((para, index) => (
+                <p
+                  key={index}
+                  className={`mb-4 font-bold ${index === 0 ? "mb-4 font-bold" : "font-normal"}`}>{para}</p>
+              ))}
+              <hr className="border-t border-gray-300 my-4" />
             </div>
           </div>
         );

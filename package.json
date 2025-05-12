@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "host":"vite --host",
+    "host": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -17,12 +17,15 @@
     "@mui/icons-material": "^7.0.2",
     "@mui/material": "^7.0.2",
     "@tailwindcss/vite": "^4.1.4",
+    "formik": "^2.4.6",
+    "framer-motion": "^12.10.5",
     "lucide-react": "^0.503.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-lottie-player": "^2.1.0",
     "react-router-dom": "^7.5.2",
-    "tailwindcss": "^4.1.4"
+    "tailwindcss": "^4.1.4",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
